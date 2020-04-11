@@ -1,0 +1,11 @@
+<!--pages/databaseGuide/databaseGuide.wxml-->
+<view class="container">
+  <!-- 操作数据库 -->
+  <view class="uploader">
+    <navigator url="../authorinfo" open-type="navigate" class="uploader-text">
+      <text>查询诗人详细信息</text>
+    </navigator>
+  </view>
+
+
+</view>

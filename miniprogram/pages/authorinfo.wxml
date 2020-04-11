@@ -1,0 +1,57 @@
+<!--miniprogram/pages/authorinfo.wxml-->
+
+<!--index.wxml-->
+
+
+
+<button type="default" bindtap="clickbtn">
+  点击开始查询
+</button>
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+<!--对话框标题-->
+<view class="dialog-title">
+  请输入要查询的作者姓名
+</view>
+<!--对话框输入部分-->
+<view class="input-view">
+  <input type="text" bindblur="input_content" class="input-style"/>
+</view>
+<!--对话框按钮-->
+<view class="line-top">
+  
+</view>
+<view class="btn-view">
+  <view class="btn-cancel" bindtap="click_cancel">  
+          取 消
+  </view>
+  <view class="btn-line">
+
+  </view>
+  <view class="btn-cancel" bindtap="click_ok">  
+          确 定
+  </view>
+
+
+</view>
+
+
+  
+</view>
+
+<view>
+  <text style='margin-top: 40rpx;'>
+     姓名：{{name}}  </text>
+  <text style='margin-top: 80rpx;'>
+     简介：{{description}}  </text>
+</view>
+
+<input placeholder="填写要增加的名字" bindinput ="addName"></input>
+<input placeholder ="填写他的简历" bindinput="addDesc"></input>
+
+<button bindtap = "addData" type = "primary">如果您觉得数据库数据不全，也可以向我们提交意见</button>
+<input placeholder="填写要撤销的提交（名字）" bindinput = "delDataInput"></input>
+<button bindtap = "delData" type = "primary">撤销您的提交</button>
+<input placeholder="填写要更改的名字" bindinput="updateDataInput"></input>
+<input placeholder="输入新的简介" bindinput="updateDesc"></input>
+<button bindtap = "updateData" type = "primary" class = "btn">更新数据</button>
